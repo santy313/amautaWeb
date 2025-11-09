@@ -11,11 +11,9 @@ const GetAccessToken = ({ onGetAccessToken }: Props) => {
         const token = await onGetAccessToken();
         console.log(token);
       }}
-    >
-      Get access token (see console log)
-      <br /> 
-      Hola mundo como estas?
-    </button>
+    />
+
+
   );
 };
 

@@ -4,16 +4,15 @@ type Props = {
   onSignIn: () => Promise<void>;
 };
 
-const SignIn = ({ onSignIn }: Props) => {
+const SignInButton = ({ onSignIn }: Props) => {
   return (
     <button
-      onClick={() => {
-        onSignIn();
-      }}
+      onClick={() => onSignIn()}
+      className="bg-primario text-secondary font-semibold hover:bg-[#c5bca3] px-6 py-2 rounded-lg"      
     >
-      Sign In
+      Iniciar sesión
     </button>
   );
 };
 
-export default SignIn;
+export default SignInButton;
