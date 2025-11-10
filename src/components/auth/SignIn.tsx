@@ -6,7 +6,7 @@ export const LogingSignIn = () => {
   return (
     <SignInButton
       onSignIn={async () => {
-        'use server';
+        
         await signIn(logtoServerConfig); 
       }}
     />

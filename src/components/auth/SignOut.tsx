@@ -9,13 +9,13 @@ export const LogingSignOut = () => {
     <>
       <SignOutButton
         onSignOut={async () => {
-          'use server';
-          await signOut(logtoServerConfig); // ✅ sin logtoConfig
+          
+          await signOut(logtoServerConfig); 
         }}
       />{' '}
       <GetAccessToken
         onGetAccessToken={async () => {
-          'use server';
+          
           return getAccessToken(logtoServerConfig);
         }}
       />
