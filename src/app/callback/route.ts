@@ -8,5 +8,5 @@ export async function GET(request: NextRequest) {
   await handleSignIn(logtoServerConfig, searchParams);
   console.log('Sign-in handled, redirecting to home page.');
 
-  redirect('/dashboard/main');
+  redirect('/dashboard/Main');
 }

@@ -14,20 +14,25 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Amauta Asesores",
-  description: "Gestión de Asesorías Financieras, Laborales y Extranjeria",
+  description:
+    "Gestión de Asesorías Financieras, Laborales, Fiscales y de Extranjería",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primario text-neutro`}
       >
-        {children}
+        <main className="min-h-screen flex flex-col">
+          {children}
+          <footer className="mt-auto py-6 text-center text-sm text-gray-400 border-t border-gray-200 bg-gray-100">
+            © {new Date().getFullYear()} Amauta Asesoría Integral. Todos los
+            derechos reservados.
+          </footer>
+        </main>
       </body>
     </html>
   );
