@@ -50,7 +50,7 @@ export default function MainPage() {
 
         {/* Cuadro central animado */}
         <motion.div
-          className="relative z-10 max-w-lg text-center bg-neutro/90 backdrop-blur-md p-8 rounded-2xl shadow-xl"
+          className="relative m-5 z-10 max-w-lg text-center bg-neutro/90 backdrop-blur-md p-6 rounded-2xl shadow-xl"
           initial="hidden"
           animate="visible"
         >

@@ -9,7 +9,7 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
         <div className="flex min-h-screen bg-gray-50 text-gray-800">
             <SidebarProvider>
                 <AppSidebar />
-                <div className="flex-1 p-6">{children}</div>
+                <div className="flex-1">{children}</div>
             </SidebarProvider>
         </div>
 
