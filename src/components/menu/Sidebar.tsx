@@ -100,7 +100,7 @@ export const AppSidebar = () => {
                   <SidebarMenuItem key="logout">
                     <SidebarMenuButton asChild>
                       <div
-                        className="flex items-center gap-2 p-2 rounded hover:bg-gray-100 cursor-pointer"
+                        
                         onClick={() => setIsOpen(false)}
                       >
                         <LogingSignOut />

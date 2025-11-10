@@ -1,9 +1,9 @@
-// src/app/page.tsx
 import Image from "next/image";
 import { LogingSignOut } from "@/components/auth/SignOut";
-import { LogingSignIn } from "@/components/auth/SignIn";
+
 import { getLogtoContext } from "@logto/next/server-actions";
 import { logtoServerConfig } from "./logto";
+import LogingSignIn from "@/components/auth/SignIn";
 
 
 export default async function Home() {
