@@ -1,8 +1,15 @@
-export const logtoConfig = {
-  endpoint: 'https://tkdey9.logto.app/',
-  appId: 'obgavrx27pcerosj8uddj',
-  appSecret: 'hUq3DbvNWhMnPpSuYZPO8BCMLUZ5G4LC',
-  baseUrl: 'http://localhost:3000', // Change to your own base URL
-  cookieSecret: 'LW9WEhH8f9FacyKQuJKAGPpky3C7s9Od', // Auto-generated 32 digit secret
-  cookieSecure: process.env.NODE_ENV === 'production',
+// src/config/Logto.ts
+
+export const logtoServerConfig = {
+  endpoint: process.env.NEXT_PUBLIC_LOGTO_ENDPOINT!,
+  appId: process.env.NEXT_PUBLIC_LOGTO_APP_ID!,
+  appSecret: process.env.LOGTO_APP_SECRET!,
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL!,
+  cookieSecret: process.env.LOGTO_COOKIE_SECRET!,
+  cookieSecure: process.env.NODE_ENV === "production",
+};
+
+export const logtoClientConfig = {
+  endpoint: logtoServerConfig.endpoint,
+  appId: logtoServerConfig.appId,
 };

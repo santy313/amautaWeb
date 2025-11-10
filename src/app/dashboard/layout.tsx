@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/Sidebar";
+import { AppSidebar } from "@/components/menu/Sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 
@@ -6,16 +6,14 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 
 export default function DashboardLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <div className="bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-300 selection:bg-blue-600 selection:text-white">
-
-            <div className="flex">
-                <SidebarProvider>
-                    <AppSidebar />
-                    <div className="p-2 w-full text-slate-900">
-                        {children}
-                    </div>
-                </SidebarProvider>
-            </div>
+        <div className="flex min-h-screen">
+            <SidebarProvider>
+                <AppSidebar />
+                <div className="flex-1 p-4 bg-gray-50 text-slate-900">
+                    {children}
+                </div>
+            </SidebarProvider>
         </div>
+
     );
 }

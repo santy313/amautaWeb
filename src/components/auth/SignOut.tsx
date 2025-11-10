@@ -1,6 +1,6 @@
 import { signOut } from '@logto/next/server-actions';
 import SignOutButton from '@/components/botons/sign-out';
-import { logtoConfig } from '@/app/logto';
+import { logtoServerConfig } from '@/app/logto';
 import { getAccessToken } from '@logto/next/server-actions';
 import GetAccessToken from '@/app/get-access-token';
 
@@ -10,13 +10,13 @@ export const LogingSignOut = () => {
       <SignOutButton
         onSignOut={async () => {
           'use server';
-          await signOut(logtoConfig); // ✅ sin logtoConfig
+          await signOut(logtoServerConfig); // ✅ sin logtoConfig
         }}
       />{' '}
       <GetAccessToken
         onGetAccessToken={async () => {
           'use server';
-          return getAccessToken(logtoConfig);
+          return getAccessToken(logtoServerConfig);
         }}
       />
     </>

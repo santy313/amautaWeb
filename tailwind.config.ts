@@ -8,13 +8,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primario: "#192537", // Azul
-        secundario: "#b09e80", // Dorado
-        neutro: "#ffffff", // Blanco
-      },
-    },
+    extend: {}, // los colores ya están en globals.css
   },
   plugins: [animate],
 };

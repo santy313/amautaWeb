@@ -14,6 +14,7 @@ import {
 import Link from "next/link"
 import { LogingSignOut } from "../auth/SignOut"
 
+
 // Menu items.
 const items = [
   {
@@ -57,12 +58,18 @@ export const AppSidebar = () => {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
+                <SidebarMenuItem key="logout">
+                  <SidebarMenuButton asChild>
+                    <button className="flex items-center gap-2">
+                      <LogingSignOut />
+                    </button>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
       </Sidebar>
-      <LogingSignOut />
     </>
   )
 }
