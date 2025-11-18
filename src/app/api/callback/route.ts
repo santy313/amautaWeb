@@ -1,7 +1,7 @@
 import { handleSignIn } from '@logto/next/server-actions';
 import { redirect } from 'next/navigation';
 import { NextRequest } from 'next/server';
-import { logtoServerConfig } from '../../lib/logto';
+import { logtoServerConfig } from '../../../lib/logto';
 
 
 
