@@ -8,7 +8,7 @@ const SignInButton = ({ onSignIn }: Props) => {
   return (
     <button
       onClick={() => onSignIn()}
-      className="px-4 py-2 bg-secundario text-primario rounded-lg hover:bg-primario hover:text-white transition-all"
+      className="px-4 py-2 bg-secundario text-primary rounded-lg hover:bg-primario hover:text-white transition-all"
     >
       Iniciar sesión
     </button>
