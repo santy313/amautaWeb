@@ -5,11 +5,10 @@ type Props = {
 };
 
 const GetAccessToken = ({ onGetAccessToken }: Props) => {
-  return (
+  return (    
     <button
       onClick={async () => {
-        const token = await onGetAccessToken();
-        console.log(token);
+        const token = await onGetAccessToken();        
       }}
     />
 

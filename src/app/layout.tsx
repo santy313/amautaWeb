@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,26 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amauta Asesores",
-  description:
-    "Gestión de Asesorías Financieras, Laborales, Fiscales y de Extranjería",
+  title: "Asesoria Amauta",
+  description: "Asesoria de Murcia, confia en nosotros para todos tus tramites.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primario text-neutro`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="min-h-screen flex flex-col">
-          {children}
-          <footer className="mt-auto py-6 text-center text-sm text-gray-400 border-t border-gray-200 bg-gray-100">
-            © {new Date().getFullYear()} Amauta Asesoría Integral. Todos los
-            derechos reservados.
-          </footer>
-        </main>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+        {children}
+          </ThemeProvider>
       </body>
     </html>
   );

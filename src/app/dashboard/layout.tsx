@@ -1,17 +1,14 @@
-import { AppSidebar } from "@/components/menu/Sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
-
-
-
+import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 export default function DashboardLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <div className="flex min-h-screen bg-gray-50 text-gray-800">
-            <SidebarProvider>
-                <AppSidebar />
-                <div className="flex-1">{children}</div>
-            </SidebarProvider>
-        </div>
 
+        <SidebarProvider>
+            <AppSidebar />
+            <SidebarInset>
+                {children}
+            </SidebarInset>
+        </SidebarProvider>
     );
 }
